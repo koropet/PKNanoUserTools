@@ -1,0 +1,5 @@
+D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\bin\Debug\PKNanoUserTools.dll
+D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\bin\Debug\PKNanoUserTools.pdb
+D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\obj\Debug\PKNanoUserTools.csprojResolveAssemblyReference.cache
+D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\obj\Debug\PKNanoUserTools.dll
+D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\obj\Debug\PKNanoUserTools.pdb
