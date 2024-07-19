@@ -69,6 +69,8 @@ namespace PKNanoUserTools
 
 			DimDirection = new Line(Point3d.Origin, new Point3d(1000, 0, 0));
 
+			//TODO такие конструкции в автокаде работают, что после ввода и обработки ключевых слов он остается в режиме выбора, но нанокад выходит дальше
+			//это можно переработать зацикливаием
 			var oi_sset = Input.Objects(
 				
 				keywords: new string[] {
@@ -140,8 +142,11 @@ namespace PKNanoUserTools
 				pko.Keywords.Add("Leader", "ВЫноска");
 				pko.Keywords.Add("oNLine", "Налинии");
 				PromptResult res = App.DocumentManager.MdiActiveDocument.Editor.GetKeywords(pko);
+				
 				if (res.Status != PromptStatus.OK)
+				{
 					return;
+				}
 				
 				if (res.StringResult == "Leader") {
 					tails = false;

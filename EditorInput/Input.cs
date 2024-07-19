@@ -81,6 +81,7 @@ namespace PKNanoUserTools.EditorInput
 			Init();
 
             var pso=new PromptSelectionOptions();
+            
 			
 			if(keywords!=null)
 			{
@@ -97,8 +98,6 @@ namespace PKNanoUserTools.EditorInput
 			
 			if(result.Status==PromptStatus.OK&!ImpliedFirst)
 			{
-				
-				Console.WriteLine("Зашли в имплайед");
 				status=result.Status;
 				ImpliedFirst=true;
 				return result.Value;
@@ -106,8 +105,12 @@ namespace PKNanoUserTools.EditorInput
 			else
 			{
 				result=acEd.GetSelection(pso);
-				
 				status=result.Status;
+				if(status==PromptStatus.Keyword)
+				{
+					//рекурсия специально для нанокада, потому что у него в отличие от автокада при выборе объектов такое поведение отсутствует
+					return Objects(message,keywords,keywordinput);
+				}
 				return result.Value;
 			}
 			
@@ -119,10 +122,6 @@ namespace PKNanoUserTools.EditorInput
 
             var result = acEd.SelectImplied();
 
-            if (result.Status == PromptStatus.OK)
-            {
-                Console.WriteLine("Зашли в имплайед");
-            }
             status = result.Status;
             return result.Value;
 
