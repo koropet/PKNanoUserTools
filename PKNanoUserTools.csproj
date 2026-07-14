@@ -72,6 +72,7 @@
     <Compile Include="DimEdit.cs" />
     <Compile Include="EditorInput\Input.cs" />
     <Compile Include="HoleSign.cs" />
+    <Compile Include="LineSum.cs" />
     <Compile Include="MulticadTests.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="PKMultiEditText.cs" />

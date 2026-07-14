@@ -166,8 +166,29 @@ namespace PKNanoUserTools
 		[CommandMethod("PKDimChain", CommandFlags.UsePickSet)]
 		public void DimChain()
 		{
+			
 			DimChain DC = new DimChain();
 			DC.Execute();
+		}
+		
+		[CommandMethod("PKLengthList",CommandFlags.UsePickSet)]
+		public void LengthList()
+		{
+			var ls=new LineSum();
+			ls.LengthList();
+		}
+		[CommandMethod("PKCoordsList",CommandFlags.UsePickSet)]
+		public void CoordsList()
+		{
+			var ls=new LineSum();
+			ls.CoordsList();
+		}
+		
+		[CommandMethod("PKAreaList",CommandFlags.UsePickSet)]
+		public void AreaList()
+		{
+			var ls=new LineSum();
+			ls.AreaList();
 		}
 	}
 	

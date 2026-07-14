@@ -106,9 +106,11 @@ namespace PKNanoUserTools.EditorInput
 			{
 				result=acEd.GetSelection(pso);
 				status=result.Status;
+				
 				if(status==PromptStatus.Keyword)
 				{
 					//рекурсия специально для нанокада, потому что у него в отличие от автокада при выборе объектов такое поведение отсутствует
+					//TODO надо быы добавить такую рекурсию ко всем типам ввода
 					return Objects(message,keywords,keywordinput);
 				}
 				return result.Value;
