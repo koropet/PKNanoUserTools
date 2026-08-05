@@ -190,6 +190,14 @@ namespace PKNanoUserTools
 			var ls=new LineSum();
 			ls.AreaList();
 		}
+		[CommandMethod("PKLineSum",CommandFlags.UsePickSet)]
+		public void LineSum()
+		{
+			var ls=new LineSum();
+			var doc = Application.DocumentManager.MdiActiveDocument;
+			var ed = doc.Editor;
+			ed.WriteMessage(ls.GetLengthSum().ToString());
+		}
 	}
 	
 	/// <summary>

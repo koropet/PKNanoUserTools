@@ -176,6 +176,11 @@ namespace PKNanoUserTools
 						var l_h = o as Hatch;
 						list.Add(String.Format("{0:F3}",l_h.Area));
 					}
+					if(o is Circle)
+					{
+						var l_c = o as Circle;
+						list.Add(String.Format("{0:F3}",l_c.Area));
+					}
 				}
 			}
 			
