@@ -35,7 +35,7 @@ namespace PKNanoUserTools
 		[CommandMethod("PKSample",CommandFlags.UsePickSet)]
 		public void Sample()
 		{
-			var doc = Application.DocumentManager.MdiActiveDocument;
+			/*var doc = Application.DocumentManager.MdiActiveDocument;
 			var ed = doc.Editor;
 			Database db = HostApplicationServices.WorkingDatabase;
 			PlatformDb.DatabaseServices.TransactionManager tm = db.TransactionManager;
@@ -84,7 +84,8 @@ namespace PKNanoUserTools
 			}
 			var ds = Application.GetSystemVariable("DIMSCALE");
 			ed.WriteMessage(ds.ToString());
-			ed.WriteMessage("Success! WOW");
+			ed.WriteMessage("Success! WOW");*/
+			BVBS.PlineToBvbs.Execute();
 		}
 		
 		[CommandMethod("PKBreakLine",CommandFlags.UsePickSet)]
@@ -170,7 +171,24 @@ namespace PKNanoUserTools
 			DimChain DC = new DimChain();
 			DC.Execute();
 		}
-		
+		[CommandMethod("PKPatternCopy",CommandFlags.UsePickSet)]
+		public void PatternCop()
+		{
+			PatternCopy PC = new PatternCopy();
+			PC.Execute();
+		}
+		[CommandMethod("PKMLeader", CommandFlags.UsePickSet)]
+		public void MultiLeader()
+		{
+			MultiLeader ML = new MultiLeader();
+			ML.Execute();
+		}
+		[CommandMethod("PKMLeaderInline", CommandFlags.UsePickSet)]
+		public void MultiLeaderInline()
+		{
+			MultiLeader ML = new MultiLeader();
+			ML.MakeArrowsInline();
+		}
 		[CommandMethod("PKLengthList",CommandFlags.UsePickSet)]
 		public void LengthList()
 		{

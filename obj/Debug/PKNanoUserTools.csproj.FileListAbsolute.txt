@@ -3,3 +3,8 @@ D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\bin\Debug\PK
 D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\obj\Debug\PKNanoUserTools.csprojResolveAssemblyReference.cache
 D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\obj\Debug\PKNanoUserTools.dll
 D:\!USERS\PKorobkin\Documents\SharpDevelop Projects\PKNanoUserTools\obj\Debug\PKNanoUserTools.pdb
+D:\P\PKNanoUserTools\obj\Debug\PKNanoUserTools.csprojResolveAssemblyReference.cache
+D:\P\PKNanoUserTools\obj\Debug\PKNanoUserTools.dll
+D:\P\PKNanoUserTools\obj\Debug\PKNanoUserTools.pdb
+D:\P\PKNanoUserTools\bin\Debug\PKNanoUserTools.dll
+D:\P\PKNanoUserTools\bin\Debug\PKNanoUserTools.pdb
