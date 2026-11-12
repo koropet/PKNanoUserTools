@@ -216,6 +216,11 @@ namespace PKNanoUserTools
 			var ed = doc.Editor;
 			ed.WriteMessage(ls.GetLengthSum().ToString());
 		}
+		[CommandMethod("PKDrawTails",CommandFlags.UsePickSet)]
+		public void DrawTails()
+		{
+			var dt=new DrawTails();
+		}
 	}
 	
 	/// <summary>

@@ -340,4 +340,12 @@ namespace PKNanoUserTools.Utilities
       	App.DocumentManager.MdiActiveDocument.SendStringToExecute(str,true,false,true);
       }
     }
+	public class NanoScale
+	{
+		public double Scale;
+		public NanoScale()
+		{
+			Scale = 1/(double)Platform.ApplicationServices.Application.GetSystemVariable("DIMSCALE");
+		}
+	}
 }

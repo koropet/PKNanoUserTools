@@ -72,6 +72,7 @@
     <Compile Include="BVBS\PlineToBvbs.cs" />
     <Compile Include="DimChain.cs" />
     <Compile Include="DimEdit.cs" />
+    <Compile Include="DrawTails.cs" />
     <Compile Include="EditorInput\Input.cs" />
     <Compile Include="HoleSign.cs" />
     <Compile Include="LineSum.cs" />
