@@ -19,6 +19,7 @@ using HostMgd.EditorInput;
 using UT=PKNanoUserTools.Utilities.Utilities;
 using PKNanoUserTools.Utilities;
 using PKNanoUserTools.EditorInput;
+using App = HostMgd.ApplicationServices.Application;
 
 using Platform = HostMgd;
 using PlatformDb = Teigha;
@@ -328,6 +329,17 @@ namespace PKNanoUserTools
 			}
 			using (var th = new TransactionHelper())
 			{
+				//пробуем поставить всем брейклайнам слой, если его нет в таблице, то ставится текущий
+				var layerTable = th.ReadObject(App.DocumentManager.MdiActiveDocument.Database.LayerTableId) as LayerTable;
+				var layer = th.ReadObject(layerTable["ПК_С_ЛинииРазрыва"]) as LayerTableRecord;
+				if(layer!=null)
+				{
+					foreach(var res in results)
+					{
+						res.Layer=layer.Name;
+					}
+				}
+				
 				th.WriteObjects(results);
 			}
 			
@@ -365,6 +377,10 @@ namespace PKNanoUserTools
 
 			result.AddVertexAt(result.NumberOfVertices, p21.to2d(), 0, 0, 0);
 			result.SetDatabaseDefaults();
+			
+			
+			
+			result.Layer="ПК_С_ЛинииРазрыва";
 			return result;
 		}
 		/// <summary>
